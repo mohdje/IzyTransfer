@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'IzyUI';
+    src: url('./fonts/izy-font.woff2') format('woff2');
+}
+
+
+body {
+    -webkit-app-region: drag;
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background: linear-gradient(181deg, rgba(255, 245, 253, 1) 15%, rgba(245, 245, 245, 1) 85%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    text-align: center;
+    font-family: 'IzyUI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: black;
+    text-align: center;
+    font-family: 'IzyUI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#selectFolderBtn {
+    background-color: #0E5DE5;
+    border: none;
+    border-top: 1px solid #6094ee;
+    color: white;
+    padding: 8px 50px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    margin-top: 20px;
+
+
+    img {
+        width: auto;
+        height: 18px;
+        margin-right: 8px;
+    }
+
+    h3 {
+        font-weight: 500;
+    }
+}
+
+#selectFolderBtn:hover {
+    background-color: #0c4ac1;
+}
+
+#selectFolderBtn:active {
+    background-color: #063792;
+}
+
+
+#selectedFolderContainer {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    max-width: 80%;
+
+    img {
+        width: auto;
+        height: 30px;
+    }
+
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+    }
+}
+
+#qrCodeContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #8b8b8b1f;
+
+    img {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border-radius: inherit;
+    }
+}
+
+#transferInfoContainer.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#transferInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 70%;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    .transfer-info {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        width: 100%;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .progress-bar-container {
+        width: 100%;
+        height: 7px;
+        background-color: #ccc;
+        border-radius: 10px;
+
+
+        #progressBar {
+            height: 100%;
+            background-color: #0E5DE5;
+            border-radius: 10px;
+            width: 0;
+        }
+
+        #progressBar.complete {
+            background-color: #30d158;
+        }
+    }
+
+    #cancelBtn {
+        background-color: #dddddde3;
+        border: 2px solid #c5c5c9;
+        padding: 8px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 8px;
+
+        h4 {
+            color: #0E5DE5;
+            font-weight: 600;
+            font-family: 'IzyUI', sans-serif;
+        }
+    }
+
+    #cancelBtn:hover {
+        background-color: #e4e4e486;
+    }
+
+    #cancelBtn:active {
+        background-color: #ffffff86;
+    }
+}

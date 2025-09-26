@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Izy Transfer</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img src="./logo.svg" alt="Izy Transfer Logo" id="logo">
+    <div class="content-switcher">
+        <div id="sendSwitch" class="active">
+            <h4>Send</h4>
+        </div>
+        <div id="downloadSwitch">
+            <h4>Download</h4>
+        </div>
+
+    </div>
+    <div id="downloadContent">
+        <div class="bottom-action">
+            <button onclick="downloadFiles()">Download Files</button>
+        </div>
+    </div>
+    <div id="sendContent">
+        <input type="file" id="fileInput" style="display: none;" multiple>
+        <button id="selectFilesBtn">Select files</button>
+        <div class="bottom-action">
+            <button onclick="sendFiles()">Send Files</button>
+        </div>
+    </div>
+
+    <div id="modal">
+        <div class="modal-content">
+            <img src="./spinner.svg" alt="Loading..." />
+            <h3>Loading files...</h3>
+        </div>
+    </div>
+
+    <div id="toastMessage" class="toast">
+        <p>Coucou</p>
+    </div>
+
+    <script src="renderer.js"></script>
+    <script src="client.js"></script>
+    <script src="helpers.js"></script>
+</body>
+
+</html>

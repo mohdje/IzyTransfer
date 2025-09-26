@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="250" height="238" viewBox="0 0 250 238" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.6</desc>
+<defs>
+</defs>
+<g transform="matrix(4.42 0 0 4.42 124.82 92.92)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  transform=" translate(-12, -12)" d="M 14.97535 3.01886 l 0.95982 -1.73159 a 0.19342 0.19342 0 0 0 -0.33833 -0.18756 l -0.97045 1.75078 a 6.54141 6.54141 0 0 0 -5.25275 0 L 8.40316 1.09971 a 0.19342 0.19342 0 0 0 -0.33833 0.18756 l 0.95985 1.7316 A 5.54614 5.54614 0 0 0 5.93152 7.89522 h 12.137 A 5.54615 5.54615 0 0 0 14.97535 3.01886 Z M 9.19911 5.67446 a 0.5068 0.5068 0 1 1 0.5068 -0.5068 A 0.50737 0.50737 0 0 1 9.19911 5.67446 Z m 5.60178 0 a 0.5068 0.5068 0 1 1 0.5068 -0.5068 A 0.50737 0.50737 0 0 1 14.80089 5.67446 Z m -8.86946 11.497 a 1.46713 1.46713 0 0 0 1.46713 1.46713 h 0.9736 v 3.00095 a 1.36046 1.36046 0 1 0 2.72091 0 V 18.63859 h 1.81386 v 3.00095 a 1.36046 1.36046 0 1 0 2.72091 0 V 18.63859 h 0.97364 a 1.46713 1.46713 0 0 0 1.46713 -1.46713 V 8.37532 H 5.93143 Z M 4.06415 8.14191 A 1.362 1.362 0 0 0 2.7037 9.50237 v 5.66846 a 1.36046 1.36046 0 1 0 2.72091 0 V 9.50237 A 1.362 1.362 0 0 0 4.06415 8.14191 Z m 15.8717 0 a 1.362 1.362 0 0 0 -1.36046 1.36046 v 5.66846 a 1.36046 1.36046 0 1 0 2.72091 0 V 9.50237 A 1.362 1.362 0 0 0 19.93585 8.14191 Z" stroke-linecap="round" />
+</g>
+<g transform="matrix(0.41 0 0 0.46 125.2 119.42)" id="_x32_"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  transform=" translate(-256, -256)" d="M 419.438 0 H 92.563 C 74.078 0 59.078 15 59.078 33.5 v 445 c 0 18.5 15 33.5 33.484 33.5 h 326.875 c 18.5 0 33.484 -15 33.484 -33.5 v -445 C 452.922 15 437.938 0 419.438 0 z M 259.938 490.984 c -7.969 0 -14.438 -6.453 -14.438 -14.453 c 0 -7.969 6.469 -14.438 14.438 -14.438 c 7.984 0 14.438 6.469 14.438 14.438 C 274.375 484.531 267.922 490.984 259.938 490.984 z M 413.531 441.109 H 98.469 V 39.375 h 315.063 V 441.109 z" stroke-linecap="round" />
+</g>
+</svg>
