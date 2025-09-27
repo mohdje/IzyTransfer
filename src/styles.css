@@ -52,15 +52,19 @@ p {
     margin-top: 20px;
 
 
-    img {
-        width: auto;
-        height: 18px;
-        margin-right: 8px;
-    }
 
-    h3 {
-        font-weight: 500;
-    }
+
+
+}
+
+#selectFolderBtn img {
+    width: auto;
+    height: 18px;
+    margin-right: 8px;
+}
+
+#selectFolderBtn h3 {
+    font-weight: 500;
 }
 
 #selectFolderBtn:hover {
@@ -78,17 +82,17 @@ p {
     gap: 10px;
     padding: 5px 0;
     max-width: 80%;
+}
 
-    img {
-        width: auto;
-        height: 30px;
-    }
+#selectedFolderContainer img {
+    width: auto;
+    height: 30px;
+}
 
-    p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        text-wrap: nowrap;
-    }
+#selectedFolderContainer p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
 }
 
 #qrCodeContainer {
@@ -98,18 +102,13 @@ p {
     justify-content: center;
     border-radius: 12px;
     background-color: #8b8b8b1f;
-
-    img {
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-        border-radius: inherit;
-    }
 }
 
-#transferInfoContainer.visible {
-    opacity: 1;
-    visibility: visible;
+#qrCodeContainer img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: inherit;
 }
 
 #transferInfoContainer {
@@ -123,60 +122,64 @@ p {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-    .transfer-info {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: 10px;
-        width: 100%;
+#transferInfoContainer.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
-        img {
-            width: 18px;
-            height: 18px;
-        }
-    }
+.transfer-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
 
-    .progress-bar-container {
-        width: 100%;
-        height: 7px;
-        background-color: #ccc;
-        border-radius: 10px;
+.transfer-info img {
+    width: 18px;
+    height: 18px;
+}
 
+.progress-bar-container {
+    width: 100%;
+    height: 7px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
 
-        #progressBar {
-            height: 100%;
-            background-color: #0E5DE5;
-            border-radius: 10px;
-            width: 0;
-        }
+#progressBar {
+    height: 100%;
+    background-color: #0E5DE5;
+    border-radius: 10px;
+    width: 0;
+}
 
-        #progressBar.complete {
-            background-color: #30d158;
-        }
-    }
+#progressBar.complete {
+    background-color: #30d158;
+}
 
-    #cancelBtn {
-        background-color: #dddddde3;
-        border: 2px solid #c5c5c9;
-        padding: 8px;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        border-radius: 8px;
+#cancelBtn {
+    background-color: #dddddde3;
+    border: 2px solid #c5c5c9;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
 
-        h4 {
-            color: #0E5DE5;
-            font-weight: 600;
-            font-family: 'IzyUI', sans-serif;
-        }
-    }
+#cancelBtn h4 {
+    color: #0E5DE5;
+    font-weight: 600;
+    font-family: 'IzyUI', sans-serif;
+}
 
-    #cancelBtn:hover {
-        background-color: #e4e4e486;
-    }
+#cancelBtn:hover {
+    background-color: #e4e4e486;
+}
 
-    #cancelBtn:active {
-        background-color: #ffffff86;
-    }
+#cancelBtn:active {
+    background-color: #ffffff86;
 }

@@ -13,13 +13,21 @@ try {
 }
 
 function createWindow() {
+    let iconPath;
+    if (process.platform === 'darwin') {
+        iconPath = path.join(__dirname, '..', 'assets', 'logo.icns');
+    }
+    else {
+        iconPath = path.join(__dirname, '..', 'assets', 'logo.ico');
+    }
+
     const win = new BrowserWindow({
         width: 600,
         height: 500,
         resizable: false,
         autoHideMenuBar: true,
         title: 'Izy Transfer',
-        icon: path.join(__dirname, '..', 'assets', 'logo.ico'),
+        icon: iconPath,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
