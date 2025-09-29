@@ -9,9 +9,20 @@
 </head>
 
 <body>
-    <button id="selectFolderBtn" onclick="selectFolder()"><img src="./assets/folder.svg" />
-        <h3>Select a folder...</h3>
-    </button>
+    <div class="select-folder-container">
+        <button id="selectFolderBtn" onclick="selectFolder()">
+            <img src="./assets/folder.svg" />
+            <h3>Select a folder...</h3>
+        </button>
+        <div class="tooltip-container">
+            <img src="./assets/info.svg" onmouseenter="showTooltip()" onmouseleave="hideTooltip()" />
+            <div id="tooltip">
+                <h5>This is the folder used to share files with other devices</h5>
+            </div>
+        </div>
+    </div>
+
+
     <div id="selectedFolderContainer">
         <img src="./assets/folder_blue.svg" />
         <p id="selectedFolderPath"></p>
@@ -20,9 +31,9 @@
         <img id="qrCodeImage" alt="QR Code will appear here" />
     </div>
     <p>Scan the QR code to access the folder</p>
+    <a onclick="showModalInfo()">It doesn't work ?</a>
 
     <div id="transferInfoContainer">
-
         <div class="transfer-info">
             <img id="defaultTransferImage" src="./assets/transfer.svg" />
             <img id="deviceInfoImage" />
@@ -33,6 +44,14 @@
         </div>
         <button id="cancelBtn" onclick="cancelTransfer()">
             <h4>Cancel</h4>
+        </button>
+    </div>
+
+    <div id="modalInfo">
+        <p>With the device you want to share files with, open your web browser and to go to:</p>
+        <p id="serverUrl"></p>
+        <button onclick="closeModalInfo()">
+            <h3>Close</h3>
         </button>
     </div>
 

@@ -1,5 +1,5 @@
 const qrcode = require('qrcode')
-const { ipcMain, dialog } = require('electron')
+const { ipcMain, dialog, shell } = require('electron')
 const { getStaticFolderPath, setStaticFolderPath, getClientPageUrl, setDataTransferProgressCallback, cancelDataTransfer } = require('./server')
 
 function setIpc(window) {
@@ -26,6 +26,14 @@ function setIpc(window) {
 
     ipcMain.handle('cancelDataTransfer', () => {
         cancelDataTransfer();
+    });
+
+    ipcMain.handle('openFolder', async (_event, path) => {
+        await shell.openPath(path);
+    });
+
+    ipcMain.handle('getServerUrl', () => {
+        return getClientPageUrl();
     });
 
     setDataTransferProgressCallback((dataProgress) => {

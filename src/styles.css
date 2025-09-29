@@ -14,7 +14,9 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    padding: 0;
     gap: 10px;
+    user-select: none;
 }
 
 h1,
@@ -38,7 +40,18 @@ p {
     padding: 0;
 }
 
-#selectFolderBtn {
+a {
+    color: #0c4ac1;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'IzyUI', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+button {
     background-color: #0E5DE5;
     border: none;
     border-top: 1px solid #6094ee;
@@ -50,31 +63,67 @@ p {
     border-radius: 8px;
     display: flex;
     margin-top: 20px;
-
-
-
-
-
 }
 
-#selectFolderBtn img {
+button img {
     width: auto;
     height: 18px;
     margin-right: 8px;
 }
 
-#selectFolderBtn h3 {
+button h3 {
     font-weight: 500;
 }
 
-#selectFolderBtn:hover {
+button:hover {
     background-color: #0c4ac1;
 }
 
-#selectFolderBtn:active {
+button:active {
     background-color: #063792;
 }
 
+.select-folder-container {
+    position: relative;
+}
+
+.tooltip-container {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateX(100%);
+    cursor: pointer;
+}
+
+.tooltip-container img {
+    width: 20px;
+    height: 20px;
+}
+
+#tooltip {
+    transform: translateX(-45%);
+    padding: 5px;
+    width: 130px;
+    background-color: #25252562;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#tooltip h5 {
+    font-weight: 500;
+}
+
+#tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
 #selectedFolderContainer {
     display: none;
@@ -89,10 +138,15 @@ p {
     height: 30px;
 }
 
-#selectedFolderContainer p {
+#selectedFolderPath {
     overflow: hidden;
     text-overflow: ellipsis;
     text-wrap: nowrap;
+}
+
+#selectedFolderPath:hover {
+    color: #0c4ac1;
+    cursor: pointer;
 }
 
 #qrCodeContainer {
@@ -182,4 +236,34 @@ p {
 
 #cancelBtn:active {
     background-color: #ffffff86;
+}
+
+#modalInfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    background-color: #25252562;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 280px;
+    height: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#modalInfo.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#modalInfo p {
+    color: white;
 }

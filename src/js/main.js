@@ -23,7 +23,7 @@ function createWindow() {
 
     const win = new BrowserWindow({
         width: 600,
-        height: 500,
+        height: 550,
         resizable: false,
         autoHideMenuBar: true,
         title: 'Izy Transfer',
@@ -36,6 +36,8 @@ function createWindow() {
     })
 
     win.loadFile(path.join(__dirname, '..', 'index.html'))
+
+    //win.webContents.openDevTools()
 
     setIpc(win);
 }

@@ -1,6 +1,6 @@
 addEventListener('DOMContentLoaded', async () => {
-    const desktopPath = await window.electronAPI.getDefaultFolderPath();
-    updateSelectedFolderPath(desktopPath);
+    const defaultFolderPath = await window.electronAPI.getDefaultFolderPath();
+    updateSelectedFolderPath(defaultFolderPath);
 
     const qrCodeDataURL = await window.electronAPI.getQRCode();
     if (qrCodeDataURL) {
@@ -8,6 +8,9 @@ addEventListener('DOMContentLoaded', async () => {
         qrCodeImage.src = qrCodeDataURL;
         document.getElementById('qrCodeContainer').style.display = 'flex';
     }
+
+    const serverUrl = document.getElementById('serverUrl');
+    serverUrl.innerText = await window.electronAPI.getServerUrl();
 
     window.electronAPI.onDataTransferProgress((dataProgress) => {
         updateDataTransferProgress(dataProgress);
@@ -21,6 +24,27 @@ async function selectFolder() {
     }
 }
 
+function showModalInfo() {
+    const modalInfo = document.getElementById('modalInfo');
+    modalInfo.classList.add('visible');
+}
+
+function closeModalInfo() {
+    console.log('closeModalInfo');
+    const modalInfo = document.getElementById('modalInfo');
+    modalInfo.classList.remove('visible');
+}
+
+function showTooltip() {
+    const tooltip = document.getElementById('tooltip');
+    tooltip.classList.add('visible');
+}
+
+function hideTooltip() {
+    const tooltip = document.getElementById('tooltip');
+    tooltip.classList.remove('visible');
+}
+
 function cancelTransfer() {
     window.electronAPI.cancelDataTransfer();
 }
@@ -28,6 +52,9 @@ function cancelTransfer() {
 function updateSelectedFolderPath(path) {
     const selectedFolderPath = document.getElementById('selectedFolderPath');
     selectedFolderPath.textContent = path;
+    selectedFolderPath.onclick = () => {
+        window.electronAPI.openFolder(path);
+    }
 
     const selectedFolderElement = document.getElementById('selectedFolderContainer');
     selectedFolderElement.style.display = 'flex';
