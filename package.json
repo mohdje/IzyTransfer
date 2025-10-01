@@ -27,7 +27,7 @@
       "output": "dist"
     },
     "mac": {
-      "icon": "src/assets/logo.icns",
+      "icon": "src/assets/icon.icns",
       "target": [
         "dmg"
       ],
@@ -37,7 +37,7 @@
       "target": [
         "nsis"
       ],
-      "icon": "src/assets/logo.ico"
+      "icon": "src/assets/icon.ico"
     },
     "files": [
       "src/**/*",
